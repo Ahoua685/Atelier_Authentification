@@ -39,7 +39,9 @@ Difficulté : Faible (~20 minutes)
 
 Rendez-vous sur **https://www.alwaysdata.com/fr/**  
   
-Remarque : **Attention à bien vous rappeler de vos Login/Password** lors de la création de votre compte site car vous en aurez besoin plus tard pour la création de vos Secrets GitHUB.  
+Remarque : **Attention à bien vous rappeler de vos Login/Password** lors de la création de votre compte site car vous en aurez besoin plus tard pour la création de vos Secrets GitHUB.
+
+
   
 Voici une vidéo d'accompagnement pour vous aider dans cette séquence de création d'un site sur Alwaysdata : [Vidéo Alwaysdata](https://youtu.be/6jJiqv_ZCHg)  
   
