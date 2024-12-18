@@ -8,9 +8,7 @@ session_start();
 if (isset($_COOKIE['authToken']) && $_COOKIE['authToken'] === '12345') {
     header('Location: page_admin.php');
     exit();
-     elseif (isset($_COOKIE['authToken']) && str_starts_with($_COOKIE['authToken'], 'user_')) {
-    header('Location: page_user.php');
-    exit();
+     
 }
 
 
