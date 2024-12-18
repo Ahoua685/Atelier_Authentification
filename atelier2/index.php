@@ -10,6 +10,7 @@ if (isset($_COOKIE['authToken']) && $_COOKIE['authToken'] === '12345') {
     exit();
 }
 
+
 // Gérer la soumission du formulaire
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'];
