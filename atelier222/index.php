@@ -8,6 +8,7 @@ session_start();
 if (isset($_COOKIE['authToken']) && $_COOKIE['authToken'] === '12345') {
     header('Location: page_admin.php');
     exit();
+     
 }
 
 
@@ -19,8 +20,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Vérification simple du username et de son password.
     // Si ok alors on initialise le cookie sur le poste de l'utilisateur 
     if ($username === 'admin' && $password === 'secret') {
-        setcookie('authToken', '12345', time() + 3600, '/', '', false, true); // Le Cookie est initialisé et valable pendant 1 heure (3600 secondes) 
+        setcookie('authToken', 'admin', time() + 60, '/', '', false, true); // Le Cookie est initialisé et valable pendant 1 heure (3600 secondes) 
         header('Location: page_admin.php'); // L'utilisateur est dirigé vers la page home.php
+        exit();
+        elseif ($username === 'user' && $password === 'utilisateur') {
+        $token = bin2hex(random_bytes(16));
+        setcookie('authToken', 'user_' . $token, time() + 60, '/', '', true, true);
+        header('Location: page_user.php');
         exit();
     } else {
         $error = "Nom d'utilisateur ou mot de passe incorrect.";
