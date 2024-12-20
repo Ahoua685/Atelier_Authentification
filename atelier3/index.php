@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
  if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true)&& $_SESSION['username']==='user') {
     header('Location: page_user.php'); // Si l'utilisateur s'est déjà connecté alors il sera automatiquement redirigé vers la page protected.php
     exit();
-}   
+} 
  if ($username === 'user' && $password === 'secret') {
         // Stocker les informations utilisateur dans la session
         $_SESSION['loggedin'] = true;
