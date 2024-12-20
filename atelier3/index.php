@@ -22,6 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         header('Location: page_admin.php');
         exit();
  } 
+}
  else {
         $error = "Nom d'utilisateur ou mot de passe incorrect.";
     }
