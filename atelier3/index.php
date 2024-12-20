@@ -25,6 +25,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
  else {
         $error = "Nom d'utilisateur ou mot de passe incorrect.";
     }
+   if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true && $_SESSION['username']==='user') {
+    header('Location: page_user.php'); // Si l'utilisateur s'est déjà connecté alors il sera automatiquement redirigé vers la page protected.php
+    exit();
+}  
+       // Gérer le formulaire de connexion
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
      if ($username === 'user' && $password === 'secret') {
         // Stocker les informations utilisateur dans la session
         $_SESSION['loggedin'] = true;
@@ -37,11 +46,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   else {
         $error = "Nom d'utilisateur ou mot de passe incorrect."; 
   }
- if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true && $_SESSION['username']==='user') {
-    header('Location: page_user.php'); // Si l'utilisateur s'est déjà connecté alors il sera automatiquement redirigé vers la page protected.php
-    exit();
-} 
-
 }
 ?>
 
