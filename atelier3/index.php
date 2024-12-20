@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
  else {
         $error = "Nom d'utilisateur ou mot de passe incorrect.";
     }
-}
+
 
   if ($username === 'user' && $password === 'secret') {
         // Stocker les informations utilisateur dans la session
@@ -40,6 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   else {
         $error = "Nom d'utilisateur ou mot de passe incorrect."; 
   }
+}
 ?>
 
 <!DOCTYPE html>
